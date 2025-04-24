@@ -1,0 +1,20 @@
+balance = 10
+
+while True:
+    print("\n1. Deposit  2. Withdraw  3. Balance  4. Exit")
+    choice = input("Choose: ")
+
+    if choice == '1':
+        balance += float(input("Deposit amount: "))
+    elif choice == '2':
+        amount = float(input("Withdraw amount: "))
+        if amount > balance:
+            print("Insufficient funds.")
+        else:
+            balance -= amount
+    elif choice == '3':
+        print(f"Balance: ${balance}")
+    elif choice == '4':
+        break
+    else:
+        print("Invalid choice.")
